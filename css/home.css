@@ -1,0 +1,2346 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #071739;
+
+}
+
+.logout {
+    border: 1px solid #00336675;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+aside {
+    padding: 4px;
+    flex: 22%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #cdd5db;
+    color: #071739;
+
+
+}
+
+.boxLogo {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxLogo .imgLogo {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+}
+
+.boxLogo .imgLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boxAllOptions {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxAllOptions ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.boxAllOptions ul li.active {
+
+    color: #cdd5db;
+    background-color: #071739;
+}
+
+.boxAllOptions ul li {
+    width: 100%;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 4px;
+    color: #071739;
+    transition: .3s ease-in-out;
+}
+
+.boxAllOptions ul li:hover {
+    color: #cdd5db;
+    background-color: #071739;
+    cursor: pointer;
+}
+
+
+.central {
+    flex: 78%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.central header {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.subtitulo {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #071739a9;
+    letter-spacing: 2px;
+}
+
+.central header .conta {
+    width: 15%;
+    height: 100%;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    background-color: #cdd5db;
+}
+
+.central header .conta .avatarConta {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.central header .conta .avatarConta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central header .conta .nomeConta {
+    height: 100%;
+    width: 80%;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.central main {
+    width: 100%;
+    height: 93%;
+    padding: 20px;
+}
+
+.central main .painelDeAtualizacao {
+    width: 100%;
+    height: 20%;
+    gap: 10px;
+    padding: 8px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.central main .painelDeAtualizacao .cardDados {
+    width: 25%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 6px #cdd5db;
+    display: flex;
+}
+
+.central main .painelDeAtualizacao .cardDados .IconDados {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.central main .painelDeAtualizacao .cardDados .IconDados .boxIconDados {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #cdd5db;
+}
+
+.central main .painelDeAtualizacao .cardDados .IconDados .boxIconDados img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central main .painelDeAtualizacao .cardDados .dados {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.central main .tabelaDeVisualizacao {
+    width: 100%;
+    height: 75%;
+    background-color: white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+
+    margin-top: 10px;
+}
+
+.central main .tabelaDeVisualizacao .registos {
+    width: 100%;
+    height: 6.5%;
+    display: flex;
+    align-items: center;
+    color: #071739;
+}
+
+.central main .tabelaDeVisualizacao .registos .registosDados {
+    flex: 14.2%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 4px;
+    border-right: 1px solid white;
+
+}
+
+.central main .tabelaDeVisualizacao .registos:nth-child(odd) {
+    background-color: #cdd5db4f;
+}
+
+.central main .tabelaDeVisualizacao .registos.cabecalho {
+    font-weight: bold;
+    background-color: #cdd5db;
+}
+
+.central main .tabelaDeVisualizacao .registos:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.area {
+    width: 100%;
+    height: 93%;
+}
+
+.balancete {
+    padding: 26px 20px;
+}
+
+.topoPrincipal {
+    width: 100%;
+    height: 14%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 4px #cdd5db;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.balancete .topoBalancete {
+    width: 100%;
+    height: 70%;
+    gap: 10px;
+    display: flex;
+}
+
+.balancete .situacao {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    display: flex;
+    gap: 10px;
+}
+
+.balancete .situacao div {
+    flex: 20%;
+    height: 100%;
+
+}
+
+.balancete .topoBalancete .espacoDasOpcoes {
+    flex: 20%;
+    height: 100%;
+
+    padding: 8px 0px;
+}
+
+.balancete .topoBalancete .espacoDasOpcoes select,
+.balancete .topoBalancete .espacoDasOpcoes input {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #cdd5db;
+    padding: 0px 10px;
+}
+
+.centralBalancete {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxCarregarBalancete {
+    padding: 10px;
+    width: 50%;
+    height: 60%;
+    border: 1px solid #cdd5db;
+    box-shadow: 1px 1px 4px #cdd5db;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.dropBalancete {
+    width: 100%;
+    height: 82%;
+    display: grid;
+    place-items: center;
+    color: #0717399f;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: #cdd5db;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boxCarregarBalancete button {
+    width: 100%;
+    height: 14%;
+    background-color: #071739;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: .3s ease-in-out;
+}
+
+.boxCarregarBalancete button:hover {
+    cursor: pointer;
+    background-color: #071739e8;
+}
+
+.compliance {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menuCompliance {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #cdd5db;
+    align-items: center;
+    padding: 8px;
+}
+
+.opcaoMenuCompliance {
+    width: 12%;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.opcaoMenuCompliance:hover {
+    background-color: #cdd5db;
+    cursor: pointer;
+}
+
+.areaCompliance {
+    width: 100%;
+    height: 88%;
+    position: relative;
+}
+
+
+
+.pessoaCompliance {
+    display: flex;
+    flex-direction: column;
+}
+
+.topoPessoa {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+
+}
+
+.topoPessoa button {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    color: #071739;
+    font-weight: 600;
+}
+
+.pesquisaRegistroPessoa button {
+    padding: 0px;
+}
+
+.pesquisaRegistroPessoa {
+    width: 20%;
+    border: 1px solid #cdd5db;
+    height: 60%;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pesquisaRegistroPessoa input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+
+}
+
+.pesquisaRegistroPessoa button {
+    width: 20%;
+    height: 100%;
+    border: none;
+    background-color: #cdd5db;
+    color: #071739;
+    border-radius: 0px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.registoPessoas {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerRegistosPessoas {
+    width: 100%;
+    height: 6.5%;
+    display: grid;
+    grid-template-columns: 10% 10% 14% 14% 12% 10% 10% 10% 10%;
+    background-color: #cdd5db;
+}
+
+.columnHeaderPessoa {
+    height: 100%;
+    border-right: 1px solid white;
+    padding: 0px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #071739;
+    font-weight: 600;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+
+}
+
+.tabelaRegistosPessoa {
+    width: 100%;
+    height: 94%;
+    overflow-y: auto;
+    border-top: none;
+}
+
+.linhaRegistoPessoa {
+    height: 6.5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 10% 14% 14% 12% 10% 10% 10% 10%;
+}
+
+
+
+.columnRegistoPessoa {
+    height: 100%;
+    border-right: 1px solid #ffffff;
+    padding: 4px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #071739;
+}
+
+.linhaRegistoPessoa:nth-child(even) {
+    background-color: #cdd5db4f;
+    color: white;
+}
+
+.linhaRegistoPessoa:hover {
+    background-color: rgba(247, 247, 29, 0.884);
+}
+
+
+
+
+
+
+/* contrato */
+
+
+
+
+
+.contratoCompliance {
+    display: flex;
+    flex-direction: column;
+}
+
+.topoContrato {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+
+}
+
+.topoContrato button {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    color: #071739;
+    font-weight: 600;
+}
+
+.pesquisaRegistroContrato {
+    width: 20%;
+    border: 1px solid #cdd5db;
+    height: 60%;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pesquisaRegistroContrato input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+
+}
+
+.pesquisaRegistroContrato button {
+    width: 20%;
+    height: 100%;
+    border: none;
+    background-color: #cdd5db;
+    color: #071739;
+    border-radius: 0px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.registoContrato {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerRegistosContrato {
+    width: 100%;
+    height: 6.5%;
+    display: grid;
+    grid-template-columns: 10% 10% 14% 14% 12% 10% 10% 10% 10%;
+    background-color: #cdd5db;
+    align-items: center;
+}
+
+.columnHeaderContrato {
+    padding: 0px 4px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #071739;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.tabelaRegistosContrato {
+    width: 100%;
+    height: 94%;
+    overflow-y: auto;
+    border-top: none;
+}
+
+.linhaRegistoContrato {
+    height: 6.5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 10% 14% 14% 12% 10% 10% 10% 10%;
+}
+
+
+
+.columnRegistoContrato {
+    height: 100%;
+    border-right: 1px solid white;
+    padding: 4px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #071739;
+}
+
+.linhaRegistoContrato:nth-child(even) {
+    background-color: #cdd5db4f;
+}
+
+.linhaRegistoContrato:hover {
+    background-color: rgba(247, 247, 29, 0.884);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+/* contrato */
+
+
+
+
+.taxaJuros {
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.menuTaxaJuros {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #cdd5db;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+}
+
+.opcaoMenuTaxaJuros {
+    width: 20%;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.opcaoMenuTaxaJuros:hover {
+    background-color: #cdd5db;
+    cursor: pointer;
+}
+
+.activeMenuTaxaJuros {
+    background-color: #cdd5db;
+}
+
+
+.optionTaxaJurosConfigFind {
+    width: 25px;
+    height: 25px;
+}
+
+.optionTaxaJurosConfigFind img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.areaRegistosTaxaJuros {
+    width: 100%;
+    height: 88%;
+
+    position: relative;
+    display: flex;
+}
+
+.tableRegistosTaxaJuros {
+    width: 100%;
+    margin-top: 10px;
+
+    height: 100%;
+}
+
+.tableRegistosTaxaJuros.menosTaxa {
+    width: 70%;
+    height: 100%;
+}
+
+.boxInformacaoRegistosTaxaJuros {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    border: 1px solid #cdd5db;
+    margin-top: 10px;
+}
+
+.boxInformacaoRegistosTaxaJuros.maisTaxa {
+    width: 0%;
+    height: 100%;
+    display: none;
+}
+
+.titleInfoTaxaJuros {
+    width: 100%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpoDasInformacoesTaxaJuros {
+    width: 100%;
+    height: 40%;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.infosTaxaJuros {
+    width: 49.2%;
+    height: 32%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cimaInfo {
+    width: 100%;
+    height: 50%;
+    background-color: #071739;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.baixoInfo {
+    width: 100%;
+    height: 50%;
+    background-color: #cdd5db;
+    color: #071739;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContainerBtnTaxaJurosEditar {
+    width: 100%;
+    height: 8%;
+
+
+}
+
+.ContainerBtnTaxaJurosEditar button {
+    width: 100%;
+    height: 100%;
+    background-color: #071739;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.headerTableRegistoTaxaJuros {
+
+    width: 100%;
+    height: 6%;
+    display: grid;
+
+    grid-template-columns: 10% 18% 12% 12% 10% 10% 10% 8% 10%;
+    background-color: #cdd5db;
+}
+
+.columnHeaderTableTaxaJuros {
+    height: 100%;
+    border-right: 1px solid white;
+    padding: 5px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #071739;
+    text-transform: capitalize;
+}
+
+.areaTabelaRegistrosTaxaJuros {
+    width: 100%;
+    height: 94%;
+    overflow-y: auto;
+}
+
+.linhaRegistosTaxaJuros {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 10% 18% 12% 12% 10% 10% 10% 8% 10%;
+}
+
+
+
+.columnRegistoTaxaJuros {
+    height: 100%;
+    border-right: 1px solid #ffffff;
+    padding: 4px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #071739;
+}
+
+.linhaRegistosTaxaJuros:nth-child(even) {
+    background-color: #cdd5db4f;
+    color: white;
+}
+
+.linhaRegistosTaxaJuros:hover {
+    cursor: pointer;
+    background-color: rgba(247, 247, 29, 0.884);
+}
+
+.activeLinha {
+    background-color: rgba(247, 247, 29, 0.884) !important;
+}
+
+.modalAddNovoCliente {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #cdd5db6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalAddNovoCliente form {
+    width: 80%;
+    height: 76%;
+    display: flex;
+    gap: 8px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px grey;
+    background-color: white;
+
+}
+
+.compartimentoParaInputs {
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.containerCampo {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    color: #071739;
+    gap: 2px;
+    font-weight: 600;
+}
+
+.containerCampo input,
+.containerCampo select {
+    width: 100%;
+    height: 80%;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 4px;
+    color: grey;
+    background-color: #cdd5db;
+}
+
+.containerCampo input {
+    padding: 8px;
+}
+
+.containerCampo button {
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    background-color: #071739;
+    justify-self: end;
+    width: 100%;
+    height: 80%;
+    border: 1px solid white;
+    border-radius: 4px;
+    letter-spacing: 2px;
+
+}
+
+.opaci {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btnCancelar {
+    width: 25px;
+    height: 25px;
+    border: 1px solid red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btnCancelar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modalGerarTaxa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #cdd5db6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalGerarTaxa form {
+    width: 30%;
+    height: 40%;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: white;
+    box-shadow: 1px 1px 2px grey;
+
+}
+
+.parteSuperiorGerarTaxa {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    gap: 4px;
+
+}
+
+.colunasGerarTaxas {
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.containerCamposGerarTaxa {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.containerCamposGerarTaxa input,
+.containerCamposGerarTaxa select {
+    width: 100%;
+    height: 80%;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #cdd5db;
+    color: grey;
+    padding: 4px;
+}
+
+.containerCamposGerarTaxa input {
+    padding: 4px 8px;
+}
+
+.parteinferiorGerarTaxa {
+    width: 100%;
+    height: 24%;
+}
+
+.parteinferiorGerarTaxa button {
+    width: 100%;
+    height: 100%;
+    background-color: #071739;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+
+.sansoes {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.menuSansoes {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #cdd5db;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+}
+
+.opcaoMenuSansoes {
+    width: 20%;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.opcaoMenuSansoes:hover {
+    background-color: #cdd5db;
+    cursor: pointer;
+}
+
+.config-find {
+
+    width: 7%;
+    height: 50%;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.optionSansoesConfigFind {
+    width: 25px;
+    height: 25px;
+}
+
+.optionSansoesConfigFind img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+/*
+
+/////////////////////////////////////////////////////////
+
+*/
+
+.clientes {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menuGeral {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #cdd5db;
+    align-items: center;
+    padding: 8px;
+}
+
+.opcaoMenuGeral {
+    min-width: max-content;
+    padding: 0px 10px;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.opcaoMenuGeral:hover {
+    background-color: #cdd5db;
+    cursor: pointer;
+}
+
+
+.areaPesquisaChecagem {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topoParaPesquisar {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.containerInputChecagem {
+    width: 28%;
+    height: 80%;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.containerInputChecagem input {
+    width: 85%;
+    height: 100%;
+    border: none;
+    border: 1px solid #cdd5db;
+}
+
+.containerInputChecagem button {
+    width: 15%;
+    height: 100%;
+    border: none;
+    background-color: #cdd5db;
+    color: #071739;
+    border-radius: 0px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgButton {
+    width: 25px;
+    height: 25px;
+}
+
+.imgButton img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.parametroPesquisado,
+.resultadosPesquisa {
+    color: #071739;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tbResultado {
+    position: relative;
+    height: 92%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.headerTbResultado {
+    width: 100%;
+    height: 6%;
+    background-color: #cdd5db;
+    display: grid;
+    grid-template-columns: 10% 12% 20% 10% 13% 13% 10% 12%;
+
+}
+
+.headerTbResultado div {
+    display: flex;
+    align-items: center;
+    padding: 0px 4px;
+    border-left: 1px solid white;
+}
+
+.rowTbResultado {
+    width: 100%;
+    height: 6%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 10% 12% 20% 10% 13% 13% 10% 12%;
+}
+
+.rowTbResultado div {
+
+    padding: 0px 4px;
+    border-left: 1px solid white;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    color: #071739;
+}
+
+
+.rowTbResultado:nth-child(even) {
+    background-color: #cdd5db4f;
+}
+
+.rowTbResultado:hover {
+    background-color: rgba(247, 247, 29, 0.884);
+    cursor: pointer;
+}
+
+.btnImprimirRelatorio {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btnImprimirRelatorio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.areaClienteInd {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.proximoBtns {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.proximoBtns button {
+    background-color: #071739;
+    color: white;
+    font-weight: bold;
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+
+
+
+.segundoForm.form-container {
+    width: 100%;
+    overflow-y: auto;
+    height: 92%;
+}
+
+.segundoForm form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.segundoForm .section-header {
+    grid-column: span 4;
+    background-color: #7a7a7ab2;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.segundoForm .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.segundoForm .form-group label {
+    margin-bottom: 5px;
+    color: #071739;
+    font-weight: bold;
+}
+
+.segundoForm .form-group input,
+.segundoForm .form-group select {
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #cdd5db;
+    font-size: 1rem;
+    color: #333;
+}
+
+.segundoForm .form-group input:focus,
+.segundoForm .form-group select:focus {
+    border-color: #999;
+    outline: none;
+}
+
+.segundoForm .submit-btn {
+    grid-column: span 4;
+    text-align: center;
+}
+
+.segundoForm .submit-btn button {
+    background-color: #071739;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.segundoForm .submit-btn button:hover {
+    background-color: #003366;
+}
+
+
+
+/*
+
+/////////////////////////////////////////////////////////
+
+*/
+
+
+.areaClienteIndividual2 {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+
+
+.containerCampoCliente2 {
+    flex: 0 0 32.2%;
+    height: 12.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+.containerCampoCliente2 input,
+.containerCampoCliente2 select {
+    width: 100%;
+    height: 80%;
+    background-color: #cdd5db;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.titleCon {
+    border: 1px solid grey;
+    background-color: grey;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    height: 9%;
+}
+
+.containerCampoCliente2 button {
+    width: 100%;
+    height: 70%;
+    background-color: #071739;
+    color: white;
+    border: 1px solid grey;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    justify-self: end;
+}
+
+.areaAprovarCliente {
+    width: 100%;
+    height: 88%;
+    display: flex;
+}
+
+.areaAprovarCliente form {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.areaAprovarCliente form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 28%;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px grey;
+}
+
+.areaAprovarCliente form div input,
+.areaAprovarCliente form div select {
+    width: 100%;
+    height: 32%;
+    padding: 4px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #cdd5db;
+}
+
+.areaAprovarCliente form div button {
+    width: 100%;
+    height: 32%;
+    background-color: #071739;
+    color: white;
+    border: 1px solid #071739;
+    border-radius: 4px;
+}
+
+.areaAprovarCliente .clientesPorAprovar {
+    width: 70%;
+    height: 100%;
+
+    padding: 10px;
+}
+
+.tbClientesPorAprovar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.rowHeaderPorAprovar {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    background-color: #cdd5db;
+
+}
+
+.rowHeaderPorAprovar div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataPorAprovar {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    background-color: white;
+
+}
+
+
+.rowDataPorAprovar div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataPorAprovar:nth-child(odd) {
+    background-color: #cdd5db4f;
+}
+
+.rowDataPorAprovar:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.operacoes,
+.garantias {
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #cdd5db;
+}
+
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+
+
+.form-container {
+    background-color: #fff;
+    width: 100%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.photo-section {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cdd5db;
+    border-radius: 8px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.photo-label {
+    color: #7a7a7a;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.photo-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #4a4a4a;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #cdd5db;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #999;
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    color: #4a4a4a;
+}
+
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.creditos {
+    padding: 20px;
+}
+
+.menuCreditos {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #cdd5db;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+}
+
+.opcaoMenuCreditos {
+    width: max-content;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+    padding: 0px 10px;
+}
+
+.opcaoMenuCreditos:hover {
+    background-color: #cdd5db;
+    cursor: pointer;
+}
+
+
+
+
+.areaPedidoCredito {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+}
+
+.modalPedidoCredito {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px solid red;
+    width:
+        100%;
+    height: 100%;
+    background-color: white;
+}
+
+.areaPedidoCredito form {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.areaPedidoCredito form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 36%;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px grey;
+}
+
+.areaPedidoCredito form div input,
+.areaPedidoCredito form div select {
+    width: 100%;
+    height: 24%;
+    padding: 4px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #cdd5db;
+}
+
+.areaPedidoCredito .containerPedidoInput {
+    all: unset;
+    width: 100%;
+    height: 24%;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+.areaPedidoCredito .containerPedidoInput input {
+    width: 16px;
+    height: 16px;
+}
+
+.areaPedidoCredito form div button {
+    width: 100%;
+    height: 24%;
+    background-color: #071739;
+    color: white;
+    border: 1px solid #071739;
+    border-radius: 4px;
+}
+
+.areaPedidoCredito .PedidosCredito {
+    width: 70%;
+    height: 100%;
+
+    padding: 10px;
+}
+
+.tbPedidosCredito {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.rowHeaderPedidosCredito {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    background-color: #cdd5db;
+
+}
+
+.rowHeaderPedidosCredito div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataPedidosCredito {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    background-color: white;
+
+}
+
+
+.rowDataPedidosCredito div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataPedidosCredito:nth-child(odd) {
+    background-color: #cdd5db4f;
+}
+
+.rowDataPedidosCredito:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.operacoes,
+.garantias {
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #cdd5db;
+}
+
+.areaDesembolso {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+}
+
+.areaDesembolso form {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.areaDesembolso form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 21%;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px grey;
+}
+
+.areaDesembolso form div input {
+    width: 100%;
+    height: 50%;
+    padding: 4px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #cdd5db;
+}
+
+.areaDesembolso form div button {
+    width: 100%;
+    height: 50%;
+    background-color: #071739;
+    color: white;
+    border: 1px solid #071739;
+    border-radius: 4px;
+}
+
+.areaDesembolso .Desembolsos {
+    width: 70%;
+    height: 100%;
+
+    padding: 10px;
+}
+
+.tbDesembolso {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.rowHeaderDesembolso {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    background-color: #cdd5db;
+
+}
+
+.rowHeaderDesembolso div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataDesembolso {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    background-color: white;
+
+}
+
+.rowDataDesembolso div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataDesembolso:nth-child(odd) {
+    background-color: #cdd5db4f;
+}
+
+.rowDataDesembolso:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.areaPagamento {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+}
+
+.areaPagamento form {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.areaPagamento form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 21%;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px grey;
+}
+
+.areaPagamento form div input {
+    width: 100%;
+    height: 50%;
+    padding: 4px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #cdd5db;
+}
+
+
+
+
+.areaPagamento form div button {
+    width: 100%;
+    height: 50%;
+    background-color: #071739;
+    color: white;
+    border: 1px solid #071739;
+    border-radius: 4px;
+}
+
+.areaPagamento .Pagamento {
+    width: 70%;
+    height: 100%;
+
+    padding: 10px;
+}
+
+.tbPagamento {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.rowHeaderPagamento {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    background-color: #cdd5db;
+
+}
+
+.rowHeaderPagamento div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataPagamento {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    background-color: white;
+
+}
+
+
+.rowDataPagamento div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataPagamento:nth-child(odd) {
+    background-color: #cdd5db4f;
+}
+
+.rowDataPagamento:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.areaAprovarCredito {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+.areaAprovarCredito form {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.areaAprovarCredito form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 49%;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px grey;
+}
+
+.areaAprovarCredito form div input,
+.areaAprovarCredito form div select,
+.areaAprovarCredito form div textarea {
+    width: 100%;
+    padding: 4px;
+    height: 24%;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #cdd5db;
+}
+
+.areaAprovarCredito form div textarea {
+    resize: vertical;
+}
+
+.areaAprovarCredito .containerAprovarInput {
+    all: unset;
+    width: 100%;
+    height: 24%;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+.areaAprovarCredito .containerAprovarInput input {
+    width: 16px;
+    height: 16px;
+}
+
+.areaAprovarCredito form div button {
+    width: 100%;
+    height: 24%;
+    background-color: #071739;
+    color: white;
+    border: 1px solid #071739;
+    border-radius: 4px;
+}
+
+.areaAprovarCredito .AprovarCredito {
+    width: 70%;
+    height: 100%;
+
+    padding: 10px;
+}
+
+.tbAprovarCredito {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.rowHeaderAprovarCredito {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
+    background-color: #cdd5db;
+
+}
+
+.rowHeaderAprovarCredito div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.rowDataAprovarCredito {
+    width: 100%;
+    height: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+
+}
+
+
+.rowDataAprovarCredito div {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rowDataAprovarCredito:nth-child(odd) {
+    background-color: #cdd5db4f;
+}
+
+.rowDataAprovarCredito:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.imgButton {
+    width: 25px;
+    height: 25px;
+}
+
+.imgButton img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.perfilUserModal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background-color: #7a7a7a75;
+}
+
+.boxInfoPerfil {
+    width: 55%;
+    background-color: white;
+    border-radius: 8px;
+    height: 50%;
+    border: 2px solid #cdd5db;
+    display: flex;
+    padding: 20px;
+}
+
+.boxImgPerfil {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgPerfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #cdd5db;
+    overflow: hidden;
+}
+
+.namePerfil {
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.imgPerfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boxDadosPerfil {
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.campoBoxDados {
+    width: 100%;
+    height: 20%;
+
+}
+
+.campoBoxDados input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #cdd5db;
+    border-radius: 4px;
+}
+
+.campoBoxDados button {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #cdd5db;
+    background-color: #071739;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .3s ease-in-out;
+}
+
+.campoBoxDados button:hover {
+    background-color: #003366;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
