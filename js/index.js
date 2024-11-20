@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
 
         if (resultado.ok) {
             localStorage.setItem("token", resultado.token);
-            location.href = '../main/home.html'
+            location.href = 'https://priza01.github.io/priza01/pages/main/home.html'
         }
 
         else {
