@@ -21,7 +21,7 @@ class controleDaPagina {
     }
     urlHash() {
         const randomNumber = String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("l")) + String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("fe"))
-        window.location.hash = `fhjbsd=${randomNumber}`;
+        window.location.hash = `${String(crypto.randomUUID()).split('-').join("")}=${randomNumber}`;
     }
 
     verifyToken() {
