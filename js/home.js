@@ -1,6 +1,9 @@
 class controleDaPagina {
     constructor() {
         this.executadorDeTodosOsMetodos()
+        const randomNumber = String(crypto.randomUUID()).replace("-", ".") + 'f' + String(crypto.randomUUID()).replace("-", "_");
+        window.location.hash = `random=${randomNumber}`;
+
     }
 
 
@@ -20,7 +23,7 @@ class controleDaPagina {
     verifyToken() {
         const token = localStorage.getItem("token");
         if (!token) {
-            location.href = "https://priza01.github.io/priza01/pages/auth/index.html"
+            location.href = "https://priza01.github.io/priza01/index.html"
 
         }
         document.body.classList.remove('hide')
@@ -30,7 +33,7 @@ class controleDaPagina {
         btn.addEventListener("click", () => {
 
             localStorage.removeItem("token")
-            location.href = 'https://priza01.github.io/priza01/pages/auth/index.html'
+            location.href = 'https://priza01.github.io/priza01/index.html'
 
         })
     }
