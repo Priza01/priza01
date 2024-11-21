@@ -1,4 +1,7 @@
 const form = document.querySelector("form")
+
+crypto.randomUUID()
+
 const regexToEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 form.addEventListener("submit", async (e) => {
     e.preventDefault()
@@ -11,7 +14,7 @@ form.addEventListener("submit", async (e) => {
 
         if (resultado.ok) {
             localStorage.setItem("token", resultado.token);
-            location.href = 'https://priza01.github.io/priza01/pages/main/home.html'
+            location.href = 'https://priza01.github.io/priza01/pages/main/home.html?s=' + String(crypto.randomUUID()) + String(crypto.randomUUID())
         }
 
         else {
