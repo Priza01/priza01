@@ -1,8 +1,8 @@
 class controleDaPagina {
     constructor() {
+
+        this.urlHash()
         this.executadorDeTodosOsMetodos()
-        const randomNumber = String(crypto.randomUUID()).replace("-", ".") + 'f' + String(crypto.randomUUID()).replace("-", "_");
-        window.location.hash = `random=${randomNumber}`;
 
     }
 
@@ -20,6 +20,11 @@ class controleDaPagina {
         this.verifyToken()
         this.logout()
     }
+    urlHash() {
+        const randomNumber = String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("l"))
+        window.location.hash = `fhjbsd=${randomNumber}`;
+    }
+
     verifyToken() {
         const token = localStorage.getItem("token");
         if (!token) {
