@@ -1,6 +1,5 @@
 class controleDaPagina {
     constructor() {
-
         this.urlHash()
         this.executadorDeTodosOsMetodos()
 
@@ -21,7 +20,7 @@ class controleDaPagina {
         this.logout()
     }
     urlHash() {
-        const randomNumber = String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("l"))
+        const randomNumber = String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("l")) + String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("fe"))
         window.location.hash = `fhjbsd=${randomNumber}`;
     }
 
