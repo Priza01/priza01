@@ -1,6 +1,6 @@
 class controleDaPagina {
     constructor() {
-        this.urlHash()
+        // this.urlHash()
         this.executadorDeTodosOsMetodos()
 
     }
@@ -16,31 +16,31 @@ class controleDaPagina {
         this.activandoOInputBalancet()
         this.activandoBtnProximo()
         this.activandoModalPerfil()
-        this.verifyToken()
-        this.logout()
+        // this.verifyToken()
+        // this.logout()
     }
-    urlHash() {
-        const randomNumber = String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("l")) + String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("fe"))
-        window.location.hash = `${String(crypto.randomUUID()).split('-').join("")}=${randomNumber}`;
-    }
+    // urlHash() {
+    //     const randomNumber = String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("l")) + String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("fe"))
+    //     window.location.hash = `${String(crypto.randomUUID()).split('-').join("")}=${randomNumber}`;
+    // }
 
-    verifyToken() {
-        const token = localStorage.getItem("token");
-        if (!token) {
-            location.href = "https://priza01.github.io/priza01/index.html"
+    // verifyToken() {
+    //     const token = localStorage.getItem("token");
+    //     if (!token) {
+    //         location.href = "https://priza01.github.io/priza01/index.html"
 
-        }
-        document.body.classList.remove('hide')
-    }
-    logout() {
-        const btn = document.querySelector(".logout")
-        btn.addEventListener("click", () => {
+    //     }
+    //     document.body.classList.remove('hide')
+    // }
+    // logout() {
+    //     const btn = document.querySelector(".logout")
+    //     btn.addEventListener("click", () => {
 
-            localStorage.removeItem("token")
-            location.href = 'https://priza01.github.io/priza01/index.html'
+    //         localStorage.removeItem("token")
+    //         location.href = 'https://priza01.github.io/priza01/index.html'
 
-        })
-    }
+    //     })
+    // }
     activandoModalPerfil() {
         const btn = this.$(".conta");
         const perfilUserModal = this.$(".perfilUserModal");
