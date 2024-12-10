@@ -1,12 +1,11 @@
-class controleDaPagina {
+class HomeController {
     constructor() {
         this.urlHash()
         this.executadorDeTodosOsMetodos()
 
     }
 
-
-    executadorDeTodosOsMetodos() {
+    executeAllMethods() {
         this.ativadorDasOpcoesDoMenu()
         this.activeMenuTaxaJuros()
         this.ativandoAsLinhaRegistosTaxaJuros()
@@ -19,6 +18,7 @@ class controleDaPagina {
         this.verifyToken()
         this.logout()
     }
+
     urlHash() {
         const randomNumber = String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("l")) + String(crypto.randomUUID()).split('-').join(String(crypto.randomUUID()).split('-').join("fe"))
         window.location.hash = `${String(crypto.randomUUID()).split('-').join("")}=${randomNumber}`;
@@ -238,8 +238,6 @@ class controleDaPagina {
                 })
 
                 this.classList.add('active')
-
-
             })
 
         });
@@ -252,4 +250,4 @@ class controleDaPagina {
     }
 }
 
-new controleDaPagina()
+new HomeController()
