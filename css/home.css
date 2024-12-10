@@ -201,6 +201,7 @@ aside {
     border-radius: 50%;
     overflow: hidden;
     background-color: #cdd5db;
+    padding: 2px;
 }
 
 .central main .painelDeAtualizacao .cardDados .IconDados .boxIconDados img {
