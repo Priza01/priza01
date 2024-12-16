@@ -16,7 +16,7 @@ class Confirm_Recover_Code {
             if (response.ok) {
                 localStorage.setItem('data', JSON.stringify(data))
                 alert(response.sms)
-                location.href = "https://priza01.github.io/priza01/new_password.html"
+                location.href = "https://priza01.github.io/new_password.html"
             }
             else {
                 alert(response.sms)
