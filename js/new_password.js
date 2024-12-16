@@ -28,7 +28,7 @@ class Confirm_Recover_Code {
             const response = await this.sendConfirmation(dataUser)
             if (response.ok) {
                 alert(response.sms)
-                location.href = "https://priza01.github.io/priza01/index.html"
+                location.href = "https://priza01.github.io/index.html"
             }
             else {
                 alert(response.sms)
