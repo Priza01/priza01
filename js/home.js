@@ -27,7 +27,7 @@ class HomeController {
     verifyToken() {
         const token = localStorage.getItem("token");
         if (!token) {
-            location.href = "https://priza01.github.io/priza01/index.html"
+            location.href = "https://priza01.github.io/index.html"
 
         }
         document.body.classList.remove('hide')
@@ -37,7 +37,7 @@ class HomeController {
         btn.addEventListener("click", () => {
 
             localStorage.removeItem("token")
-            location.href = 'https://priza01.github.io/priza01/index.html'
+            location.href = 'https://priza01.github.io/index.html'
 
         })
     }
