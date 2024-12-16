@@ -250,4 +250,6 @@ class HomeController {
     }
 }
 
-new HomeController()
+setTimeout(function(){
+    new HomeController();
+},1500);
