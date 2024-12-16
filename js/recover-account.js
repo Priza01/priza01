@@ -15,7 +15,7 @@ class Recover_account {
             const response = await this.fetchRecover(data)
             if (response.ok) {
                 alert(response.sms)
-                location.href = "https://priza01.github.io/priza01/confirm_recover_code.html"
+                location.href = "https://priza01.github.io/confirm_recover_code.html"
             }
             else {
                 alert(response.sms)
